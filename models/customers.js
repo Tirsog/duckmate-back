@@ -1,8 +1,11 @@
 
 import {pool} from '../db/index.js' 
 
-
-export async function getCus() {
+/**
+ * This function returns the customer:
+ * @returns status+array
+ */
+export async function getCustomer() {
     const result = await pool.query (`SELECT * FROM customers`);
     const cArray = result.rows;
     return cArray

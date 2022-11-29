@@ -3,7 +3,7 @@ const router = express.Router();
 // Write your router code here!
 
 import {
-  getCus,
+  getCustomer,
   cusById,
   createCus
   /*
@@ -15,7 +15,7 @@ import {
 } from "../models/customers.js";
 
 router.get("/", async function (req, res) {
-  const customer = await getCus();
+  const customer = await getCustomer();
   res.json({ success: true, payload: customer });
   
 });
